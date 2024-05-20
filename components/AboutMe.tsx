@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutMe({ lang }: { lang: string }) {
   return (
-    <div className="flex items-center justify-around w-4/5 lg:w-1/2 pt-16">
+    <div className="flex items-center justify-around w-3/5 lg:w-1/2 pt-16">
       <div>
         <h1 className="text-2xl font-bold lg:w-2/3">
           {dictionary[lang]?.helloIAm}
@@ -59,7 +59,7 @@ export default function AboutMe({ lang }: { lang: string }) {
           alt="me"
           width={300}
           height={300}
-          className="h-48 w-48 rounded-full object-cover"
+          className="h-auto w-48 max-w-full rounded-full object-cover"
         />
       </div>
     </div>

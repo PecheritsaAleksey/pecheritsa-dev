@@ -5,22 +5,16 @@ const navItems = {
   "/": {
     name: "home",
   },
-  "/work": {
-    name: "work",
-  },
-  "/blog": {
-    name: "blog",
-  },
-  "/guestbook": {
-    name: "guestbook",
+  "/links": {
+    name: "links",
   },
 };
 
 export function Navbar() {
   return (
-    <aside className="mb-16 tracking-tight w-full">
-      <div className="flex lg:sticky lg:top-20 items-center justify-between">
-        <div className="flex justify-center flex-grow">
+    <aside className="flex items-center w-4/5 lg:w-1/2">
+      <div className="flex lg:sticky lg:top-20 items-center justify-between ">
+        <div className="flex flex-grow">
           <nav
             className="flex items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
@@ -40,9 +34,9 @@ export function Navbar() {
             </div>
           </nav>
         </div>
-        <div className="ml-auto">
-          <LanguageSwitcher />
-        </div>
+      </div>
+      <div className="ml-auto">
+        <LanguageSwitcher />
       </div>
     </aside>
   );
