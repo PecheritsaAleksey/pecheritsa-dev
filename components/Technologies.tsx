@@ -24,7 +24,7 @@ const ICONS = [
 
 export default function Technologies({ lang }: { lang: string }) {
   return (
-    <div className="flex flex-col items-center align-center justify-around w-4/5 lg:w-1/2 pt-48">
+    <div className="flex flex-col items-center align-center justify-around w-4/5 lg:w-1/2 pt-48 pb-16">
       <div>
         <h2 className="text-2xl font-bold text-center">
           {dictionary[lang]?.technologies}
