@@ -1,4 +1,5 @@
 import LinkCard from "@/components/LinkCard";
+import { dictionary } from "@/locales";
 import { PageParams } from "@/types/pageParams";
 import { get } from "@vercel/edge-config";
 import {
@@ -43,7 +44,9 @@ export default async function Links({ params: { lang } }: PageParams) {
 
   return (
     <div className="flex flex-col items-center w-4/5">
-      <h1 className="font-bold mt-4 mb-8 text-xl">{data.name}</h1>
+      <h1 className="font-bold mt-4 mb-8 text-xl">
+        {dictionary[lang]?.helloIAm}
+      </h1>
       {data.links.map((link) => {
         return <LinkCard key={link.href} {...link} />;
       })}

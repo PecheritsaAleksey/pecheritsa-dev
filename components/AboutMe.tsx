@@ -3,7 +3,17 @@ import Image from "next/image";
 
 export default function AboutMe({ lang }: { lang: string }) {
   return (
-    <div className="flex items-center justify-around w-3/5 lg:w-1/2 pt-16">
+    <div className="animate-fade-in-down flex flex-col items-center justify-around md:flex-row w-4/5 md:w-3/5 xl:w-1/2 pt-16">
+      <div className="relative md:hidden mb-4 w-36 h-36 md:w-500 md:h-500 md:order-2 rounded-full md:rounded-2xl overflow-hidden">
+        <Image
+          src="/avatar.jpg"
+          alt="me"
+          className="object-cover h-full w-full"
+          priority={true}
+          width={500}
+          height={500}
+        />
+      </div>
       <div>
         <h1 className="text-2xl font-bold lg:w-2/3">
           {dictionary[lang]?.helloIAm}
@@ -21,8 +31,7 @@ export default function AboutMe({ lang }: { lang: string }) {
                 className="h-5 w-5 mr-2"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/1999/xlink"
                 xmlSpace="preserve"
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -53,13 +62,14 @@ export default function AboutMe({ lang }: { lang: string }) {
           </a>
         </div>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Image
           src="/avatar.jpg"
           alt="me"
-          width={300}
-          height={300}
-          className="h-auto w-48 max-w-full rounded-full object-cover"
+          width={500}
+          height={500}
+          className="animate-fade-in-down object-cover rounded-2xl"
+          priority={true}
         />
       </div>
     </div>

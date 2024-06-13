@@ -1,5 +1,7 @@
 export type PageParams = {
-  params: {
-    lang: string;
-  };
+  params: BaseParams;
+};
+
+export type BaseParams = {
+  lang: string;
 };

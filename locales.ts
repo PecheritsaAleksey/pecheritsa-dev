@@ -1,4 +1,5 @@
 interface DictionaryEntry {
+  [key: string]: string;
   helloIAm: string;
   whoAmI: string;
   writeMe: string;
@@ -7,6 +8,8 @@ interface DictionaryEntry {
   currentDescription: string;
   technologies: string;
   technologiesDescription: string;
+  home: string;
+  links: string;
 }
 
 export const dictionary: Record<string, DictionaryEntry> = {
@@ -22,6 +25,8 @@ export const dictionary: Record<string, DictionaryEntry> = {
     technologies: "Technologies",
     technologiesDescription:
       "Using a range of technologies from frontend to devops",
+    home: "home",
+    links: "links",
   },
   ru: {
     helloIAm: "Привет! Меня зовут Алексей Печерица 👋",
@@ -35,5 +40,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
     technologies: "Технологии",
     technologiesDescription:
       "Использую различные технологии для разработки - от фронтенда до развертывания",
+    home: "главная",
+    links: "ссылочки",
   },
 };
