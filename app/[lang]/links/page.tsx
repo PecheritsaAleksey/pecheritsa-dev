@@ -50,16 +50,20 @@ export default async function Links({ params: { lang } }: PageParams) {
       {data.links.map((link) => {
         return <LinkCard key={link.href} {...link} />;
       })}
+
       <div className="flex items-center gap-4 mt-8 text-white">
         {ICONS.map(({ id, Component, color }) =>
           data.socials.some((social) => social.href.includes(id)) ? (
-            <div
+            <a
               key={id}
+              href={
+                data.socials.find((social) => social.href.includes(id))?.href
+              }
               className="mr-4 hover:scale-110 transition-transform"
               style={{ color }}
             >
               <Component size={50} />
-            </div>
+            </a>
           ) : null
         )}
       </div>
