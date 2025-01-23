@@ -7,6 +7,7 @@ import {
   FaLinkedinIn,
   FaTelegramPlane,
   FaTiktok,
+  FaTwitch,
 } from "react-icons/fa";
 import { FaSquareXTwitter, FaYoutube } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -21,6 +22,7 @@ const ICONS = [
   { id: "youtube", Component: FaYoutube, color: "#FF0000" },
   { id: "tiktok", Component: FaTiktok, color: "#000000" },
   { id: "github", Component: FaGithub, color: "#181717" },
+  { id: "twitch", Component: FaTwitch, color: "#9146FF" },
 ];
 
 interface Link {
